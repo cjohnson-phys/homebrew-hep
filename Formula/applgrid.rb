@@ -13,7 +13,7 @@ class Applgrid < Formula
   depends_on "lhapdf" => :optional
 
   def install
-    ENV.j1
+    ENV.deparallelize
 
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make", "install"
